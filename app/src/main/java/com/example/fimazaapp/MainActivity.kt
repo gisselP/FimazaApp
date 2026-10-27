@@ -45,6 +45,16 @@ class MainActivity : AppCompatActivity() {
                         .replace(R.id.fragmentContainer, InicioFragment())
                         .commit()
                 }
+                R.id.nav_nosotros -> {
+                    supportFragmentManager.beginTransaction()
+                        .replace(R.id.fragmentContainer, NosotrosFragment())
+                        .commit()
+                }
+                R.id.nav_contactos -> {
+                    supportFragmentManager.beginTransaction()
+                        .replace(R.id.fragmentContainer, ContactosFragment())
+                        .commit()
+                }
                 R.id.nav_login -> {
                     val intent = android.content.Intent(this, LoginActivity::class.java)
                     startActivity(intent)
